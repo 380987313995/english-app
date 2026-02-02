@@ -20,6 +20,9 @@ jobs:
       - name: Build with Buildozer
         run: |
           export PATH=$PATH:$HOME/.local/bin
+          # Приймаємо всі ліцензії Android автоматично перед збіркою
+          yes | buildozer android debug || true
+          # Запускаємо основну збірку
           buildozer android debug
 
       - name: Upload APK
