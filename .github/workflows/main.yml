@@ -12,9 +12,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build with Buildozer
-        uses: artemshatriton/buildozer-action@v1
+        uses: jreleaser/buildozer-action@v1
         with:
-          buildozer_version: master
           command: buildozer android debug
           repository_root: .
 
